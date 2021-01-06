@@ -12,19 +12,38 @@ const Signin = ({submit}) => {
     
 
     return (
+        <StyledWrapper>
+            <StyledP>TWITTER</StyledP>
+        
         <StyledForm onSubmit={(e) => submit(e, formState, setErrorMessage, history)}>
-            <StyledSpan>Signin</StyledSpan>
+            
             <SigninInput onChange={e => setFormState({...formState, username: e.target.value})} placeholder='username' type='text'></SigninInput>
             <SigninInput onChange={e => setFormState({...formState, password: e.target.value})} placeholder='password'type='password'></SigninInput>
-            <StyledSpan>{errorMessage}</StyledSpan>
-            <SigninInput type='submit'></SigninInput>
+            <StyledSpanError>{errorMessage}</StyledSpanError>
+            <SigninInput type='submit' value="submit"></SigninInput>
         </StyledForm>
+        </StyledWrapper>
     );
 };
 
-const StyledSpan = styled.span`
-    color: green;
-    margin-bottom: 12px;
+
+const StyledWrapper = styled.div`
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+`
+
+const StyledSpanError = styled.span`
+font-weight: bold;
+color: red;
+`
+
+const StyledP = styled.p`
+letter-spacing: .2rem;
+font-weight: bold;
+color: #50abf1;
 `
 
 const StyledForm = styled.form`
@@ -32,15 +51,16 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 `
 
 const SigninInput = styled.input`
     margin: 6px 0px;
     border-radius: 12px;
     border: none;
-    background-color: #222222;
+    background-color: #444857;
     height: 30px;
-    color: white;
+    color: #50abf1;
     padding: 0px 6px;
 `
 

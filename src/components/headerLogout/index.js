@@ -14,22 +14,39 @@ const HeaderLogout = () => {
 
   return (
     <Container>
+      <StyledSpan>TWITTER</StyledSpan>
       {isToken ? (
-        <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
+        <LogoutButton onClick={handleLogout}>LOGOUT</LogoutButton>
       ) : (
         null
       )}
+      
     </Container>
   )
 }
 
-const LogoutButton = styled.button`
+const StyledSpan = styled.span`
+letter-spacing: .2rem;
+font-weight: bold;
+color: white;
+display: inline-flex;
+align-items: center;
+margin-left:10px;
+
+`
+const LogoutButton = styled.p`
   padding: 12px;
-  background-color: green;
+  background-color: Transparent;
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
 `
 
 const Container = styled.div`
-  background-color: red;
+  background-color: #1998e3;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
 `
 
 export default HeaderLogout

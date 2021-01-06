@@ -40,11 +40,7 @@ const Login = ({history}) => {
     }, [])
     return (
         <div>
-            <Header></Header>
             <Signin submit={submit}></Signin>
-            <p>login</p>
-           
-            <Link to='/home'>To Home</Link>
         </div>
     );
 };

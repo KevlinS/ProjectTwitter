@@ -11,7 +11,7 @@ const Header = () => {
 }
 
 const HeaderContainer = styled.div`
-    background-color: red;
+    background-color: #1998e3;
 `
 
 export default Header
