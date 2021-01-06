@@ -19,6 +19,7 @@ const submit = (e, formState, setErrorMessage, history) => {
             password: formState.password
         }
     }).then(res => {
+        localStorage.setItem('username', formState.username)
         localStorage.setItem('token', res.headers['x-access-token'])
         history.push('/home')
         window.location.reload(); 
