@@ -51,17 +51,16 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 `
 
 const SigninInput = styled.input`
     margin: 6px 0px;
     border-radius: 12px;
     border: none;
-    background-color: #444857;
     height: 30px;
-    color: #50abf1;
     padding: 0px 6px;
+    color: white;
+    background-color: #1998e3;
 `
 
 export default Signin;
